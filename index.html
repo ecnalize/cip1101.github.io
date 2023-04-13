@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<header class="nav">
+    
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Ecnal's Gallery
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="cars.html">Cars</a>
+          <a href="animals.html">Animals</a>
+          <a href="nature.html">Nature</a>
+  
+        </div>
+    
+</header>
+<body>
+
+    <div class="slideshow-container">
+
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="https://c4.wallpaperflare.com/wallpaper/404/106/480/vehicles-pogea-racing-fplus-corsa-car-red-car-wallpaper-preview.jpg" style="width:100%">
+          <div class="text">Cars Preview</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="https://i.pinimg.com/originals/b7/2e/d7/b72ed74de7a8f13824274e4c18fef4d3.png" style="width:100%">
+          <div class="text">Animals Preview</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="https://wallpapers.com/images/hd/4k-nature-at-golden-hour-5281oz5sljar0zfm.jpg" style="width:100%">
+          <div class="text">Nature Preview</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+
+    <div class="container">
+      <div id="modal" class="modal">
+        <div class="modal-container">
+          <img id="current" src="" alt="">
+        </div>
+      </div>
+      <div class="imgs">
+        <div class="img-container">
+          <img src="https://c4.wallpaperflare.com/wallpaper/404/106/480/vehicles-pogea-racing-fplus-corsa-car-red-car-wallpaper-preview.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://i.pinimg.com/originals/36/a3/b8/36a3b8352d21d07c85603ff8b06beda2.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://cdn.wallpapersafari.com/20/95/eAnpsv.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://i.pinimg.com/originals/b7/2e/d7/b72ed74de7a8f13824274e4c18fef4d3.png" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="data:image/jpeg;base64,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" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://free4kwallpapers.com/uploads/originals/2020/02/08/animal-beauty-wallpaper.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://wallpapers.com/images/featured/ztbad1qj8vdjqe0p.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+        <div class="img-container">
+          <img src="https://wallpapers.com/images/hd/4k-nature-at-golden-hour-5281oz5sljar0zfm.jpg" alt="">
+          <div class="photo-overlay">
+            <h1>Click Me</h1>
+          </div>
+        </div>
+  
+  
+  
+      </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+
+
+  <script>
+    const current = document.querySelector('#current');
+let enlargeMessages = document.querySelectorAll('.photo-overlay h1');
+const modal = document.getElementById('modal');
+const overlay = document.querySelectorAll('.photo-overlay');
+const modalContainer = document.querySelector('.modal-container');
+
+
+for (let i =0; i < enlargeMessages.length; i++){
+  enlargeMessages[i].addEventListener('click', imgClick);
+}
+
+window.addEventListener('click', clickOutside);
+
+function imgClick(e){
+  modal.style.display = 'block';
+  current.src = e.target.parentNode.previousElementSibling.src;
+}
+
+function clickOutside(e){
+  if(e.target == modal || e.target == modalContainer){
+  modal.style.display = 'none';}
+}
+
+
+$('.slider').each(function() {
+  var $this = $(this);
+  var $group = $this.find('.slide_group');
+  var $slides = $this.find('.slide');
+  var bulletArray = [];
+  var currentIndex = 0;
+  var timeout;
+  
+  function move(newIndex) {
+    var animateLeft, slideLeft;
+    
+    advance();
+    
+    if ($group.is(':animated') || currentIndex === newIndex) {
+      return;
+    }
+    
+    bulletArray[currentIndex].removeClass('active');
+    bulletArray[newIndex].addClass('active');
+    
+    if (newIndex > currentIndex) {
+      slideLeft = '100%';
+      animateLeft = '-100%';
+    } else {
+      slideLeft = '-100%';
+      animateLeft = '100%';
+    }
+    
+    $slides.eq(newIndex).css({
+      display: 'block',
+      left: slideLeft
+    });
+    $group.animate({
+      left: animateLeft
+    }, function() {
+      $slides.eq(currentIndex).css({
+        display: 'none'
+      });
+      $slides.eq(newIndex).css({
+        left: 0
+      });
+      $group.css({
+        left: 0
+      });
+      currentIndex = newIndex;
+    });
+  }
+  
+  function advance() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      if (currentIndex < ($slides.length - 1)) {
+        move(currentIndex + 1);
+      } else {
+        move(0);
+      }
+    }, 4000);
+  }
+  
+  $('.next_btn').on('click', function() {
+    if (currentIndex < ($slides.length - 1)) {
+      move(currentIndex + 1);
+    } else {
+      move(0);
+    }
+  });
+  
+  $('.previous_btn').on('click', function() {
+    if (currentIndex !== 0) {
+      move(currentIndex - 1);
+    } else {
+      move(3);
+    }
+  });
+  
+  $.each($slides, function(index) {
+    var $button = $('<a class="slide_btn">&bull;</a>');
+    
+    if (index === currentIndex) {
+      $button.addClass('active');
+    }
+    $button.on('click', function() {
+      move(index);
+    }).appendTo('.slide_buttons');
+    bulletArray.push($button);
+  });
+  
+  advance();
+});
+
+
+        </script>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        }
+        </script>
+</html>
